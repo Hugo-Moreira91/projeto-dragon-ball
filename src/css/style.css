@@ -3,32 +3,71 @@ body{
 }
 
 main{
-    min-height: calc(100% - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 180px);
 }
 
 main .personagem{
     display: none;
-    max-width: 450px;
+    max-width: 750px;
     margin: auto;
 }
 
 main .personagem.selecionado{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 35px;
+}
+
+main .personagem .imagens-akira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main .personagem .imagem-aureola{
     width: 100px;
 }
 
-main .personagem .imagem-personagem{
+main .personagem .imagem-personagem-akira{
     width: 200px;
     border-radius: 50%;
 }
 
-main .personagem:nth-child(4) .imagem-personagem{
+main .personagem:nth-child(4) .imagem-personagem-akira{
     border: 3px solid #f0ba19;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo .logo{
+    background-image: url('../images/dbz-logo.png');
+    background-size: cover;
+    height: 100px;
+    width: 360px;
+}
+
+.conteudo .nome-personagem{
+    color: #ffffff;
+    font-size: 45px;
+    font-family: 'Secular One';
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.conteudo .nome-personagem span{
+    font-size: 30px;
+}
+
+.conteudo .descricao{
+    color: #ffffff;
+    font-family: 'Rubik';
+    line-height: 24px;
+    text-align: justify;
 }
