@@ -1,73 +1,129 @@
 body{
     background-color: #000000;
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 180px);
+    /* overflow: hidden; */
 }
 
 main .personagem{
     display: none;
-    max-width: 750px;
-    margin: auto;
 }
 
 main .personagem.selecionado{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
+    display: block;
 }
 
-main .personagem .imagens-akira{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+main .goku{
+    background: #000000 url('../images/bg-goku.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
-main .personagem .imagem-aureola{
-    width: 100px;
+main .vegeta{
+    background: #000000 url('../images/bg-vegeta.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
-main .personagem .imagem-personagem-akira{
-    width: 200px;
-    border-radius: 50%;
+main .piccolo{
+    background: #000000 url('../images/bg-piccolo.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
-main .personagem:nth-child(4) .imagem-personagem-akira{
-    border: 3px solid #f0ba19;
+main .akira{
+    background: #000000 url('../images/bg-akira-2.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+main .gohan{
+    background: #000000 url('../images/bg-gohan.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+main .kuririn{
+    background: #000000 url('../images/bg-kuririn.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+main .trunks{
+    background: #000000 url('../images/bg-trunks.png') 100% 100%/contain no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 .conteudo{
+    position: absolute;
+    top: 0;
+    left: 250px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
 }
 
 .conteudo .logo{
     background-image: url('../images/dbz-logo.png');
     background-size: cover;
     height: 100px;
-    width: 360px;
+    width: 355px;
+    margin-bottom: 25px;
 }
 
 .conteudo .nome-personagem{
     color: #ffffff;
-    font-size: 45px;
+    font-size: 48px;
     font-family: 'Secular One';
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.conteudo .nome-personagem .aureola{
+    display: block;
+    width: 30%;
+    margin: auto;
 }
 
 .conteudo .nome-personagem span{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .conteudo .descricao{
     color: #ffffff;
     font-family: 'Rubik';
     line-height: 24px;
-    text-align: justify;
+}
+
+.botoes{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.botoes .botao{
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado{
+    transform: scale(1.2);
+    box-shadow: 0 -8px 15px #FFA500;
+}
+
+.botoes .botao img{
+    width: 70px;
+    border-radius: 50%;
 }
